@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/kkamara/blockchain#readme",
   "dependencies": {
-    "crypto-js": "^4.1.1"
+    "crypto-js": "^4.1.1",
+    "log-beautify": "^1.2.0"
   }
 }

@@ -1,3 +1,4 @@
+const log = require('log-beautify')
 const SHA256 = require('crypto-js/sha256')
 
 class Block {
@@ -45,4 +46,4 @@ let newCoin = new BlockChain()
 newCoin.addBlock(new Block(1, '23/01/2022', { amount: 200, }))
 newCoin.addBlock(new Block(1, '15/02/2022', { amount: 100, }))
 
-console.log(JSON.stringify(newCoin))
+log.success(JSON.stringify(newCoin))
