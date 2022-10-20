@@ -1,0 +1,21 @@
+{
+  "name": "blockchain",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/block.js",
+  "scripts": {
+    "start": "node block.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkamara/blockchain.git"
+  },
+  "author": "https://github.com/kkamara",
+  "license": "BSD-3",
+  "bugs": {
+    "url": "https://github.com/kkamara/blockchain/issues"
+  },
+  "homepage": "https://github.com/kkamara/blockchain#readme",
+  "dependencies": {
+  }
+}

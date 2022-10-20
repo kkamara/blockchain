@@ -1,0 +1,27 @@
+name: Run CI
+
+on: [push, pull_request]
+
+jobs:
+  node-react-boilerplate:
+    name: pipeline (Node ${{ matrix.node-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ['17.x']
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+    - uses: actions/cache@v2
+      with:
+        path: '**/node_modules'
+        key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+    - name: Install dependencies
+      run: yarn install
+    - name: ls -a
+      run: ls -a
+    - name: Run blockchain
+      run: yarn start
