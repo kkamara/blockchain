@@ -3,17 +3,16 @@
 ## Installation
 
 * [Node.js](https://nodejs.org/en/) 
-* [npm](https://www.npmjs.com/get-npm) 
-* [Yarn](https://www.yarnpkg.com)
+* [pNpM](https://pnpm.io/)
 
 ```bash
-  npm i -g yarn
+  pnpm install
 ```
 
 ## Usage
 
 ```bash
-  yarn start
+  pnpm start
 ```
 
 ## Contributing

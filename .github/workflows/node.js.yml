@@ -15,13 +15,12 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    - uses: actions/cache@v2
+    - uses: pnpm/action-setup@v2.2.4
       with:
-        path: '**/node_modules'
-        key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+        version: 6.0.2
     - name: Install dependencies
-      run: yarn install
+      run: pnpm install
     - name: ls -a
       run: ls -a
     - name: Run blockchain
-      run: yarn start
+      run: pnpm start
